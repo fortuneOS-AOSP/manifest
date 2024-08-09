@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- FortuneOS -->
+  <remote  name="fortune"
+           fetch="https://github.com/fortuneOS-AOSP"
+           revision="usagi" />
+
+  <remote  name="fortune-devices"
+           fetch="https://github.com/Fortune-OS-Devices"
+           revision="usagi" />
+
+  <remote  name="fortune-gitea"
+           fetch="https://gitea.com/FortuneOS"
+           revision="usagi" />
+
+  <!-- Roootdir -->
+  <project path="art" name="art" groups="pdk" remote="fortune" />
+  <project path="bionic" name="bionic" groups="pdk" remote="fortune" />
+  <project path="fortune-keepers" name="fortune-keepers" groups="pdk" remote="fortune-devices" />
+  <project path="manifest" name="manifest" remote="fortune" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk" remote="fortune">
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="fortune">
+    <linkfile dest="Android.bp" src="root.bp" />
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  </project>
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="fortune" />
+
+  <!-- Device -->
+  <project path="device/fortune/sepolicy" name="device_fortune_sepolicy" remote="fortune" />
+
+  <!-- External -->
+  <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="fortune" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" remote="fortune" />
+  <project path="frameworks/base" name="frameworks_base" remote="fortune" />
+  <project path="frameworks/native" name="frameworks_native" remote="fortune" />
+
+  <!-- Packages -->
+  <project path="packages/apps/FortuneCraft" name="packages_apps_FortuneCraft" remote="fortune" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="fortune" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="fortune" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="fortune" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="fortune" />
+  <project path="system/update_engine" name="system_update_engine" remote="fortune" />
+
+  <!-- Vendor -->
+  <project path="vendor/addons" name="vendor_addons" remote="fortune" />
+  <project path="vendor/fortune" name="vendor_fortune" remote="fortune" />
+  <project path="vendor/fortune-preference" name="vendor_fortune-preference" remote="fortune" />
+  <project path="vendor/gms" name="android_vendor_gms" remote="fortune-gitea" />
+
+</manifest>
