@@ -48,6 +48,9 @@
   <project path="frameworks/base" name="frameworks_base" remote="fortune" />
   <project path="frameworks/native" name="frameworks_native" remote="fortune" />
 
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="fortune" />
+
   <!-- Packages -->
   <project path="packages/apps/FortuneCraft" name="packages_apps_FortuneCraft" remote="fortune" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="fortune" />
