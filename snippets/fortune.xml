@@ -99,10 +99,12 @@
   <!-- Packages -->
   <project path="packages/apps/FortuneCraft" name="packages_apps_FortuneCraft" remote="fortune" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="fortune" />
+  <project path="packages/apps/OmniStyles" name="packages_apps_OmniStyle" remote="fortune" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="fortune" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="fortune" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="fortune" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="fortune" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="fortune" />
 
   <!-- System -->
   <project path="system/core" name="system_core" remote="fortune" />
