@@ -39,6 +39,7 @@
 
   <!-- Device -->
   <project path="device/fortune/sepolicy" name="device_fortune_sepolicy" remote="fortune" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,sdm660" remote="fortune" revision="usagi-legacy-um"  />
   <project path="device/qcom/sepolicy_vndr/sm6225" name="device_qcom_sepolicy_vndr" revision="usagi-caf-sm6225" remote="fortune" />
 
   <!-- External -->
