@@ -48,6 +48,7 @@
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" remote="fortune" />
   <project path="frameworks/base" name="frameworks_base" remote="fortune" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="fortune" />
   <project path="frameworks/native" name="frameworks_native" remote="fortune" />
 
   <!-- Hardware -->
