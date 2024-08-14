@@ -57,6 +57,10 @@
   <project path="frameworks/opt/timezonepicker" name="LineageOS/android_frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="LineageOS" />
 
   <!-- Hardware -->
+  <project path="hardware/google/gchips" name="LineageOS/android_hardware_google_gchips" groups="pdk-lassen,pdk-gs-arm" remote="LineageOS" />
+  <project path="hardware/google/graphics/common" name="LineageOS/android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="LineageOS" />
+  <project path="hardware/google/pixel" name="LineageOS/android_hardware_google_pixel" groups="generic_fs,pixel" remote="LineageOS" />
+  <project path="hardware/google/pixel-sepolicy" name="LineageOS/android_hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="LineageOS" />
   <project path="hardware/lineage/compat" name="LineageOS/android_hardware_lineage_compat" remote="LineageOS" />
   <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" remote="LineageOS" />
   <project path="hardware/lineage/livedisplay" name="LineageOS/android_hardware_lineage_livedisplay" remote="LineageOS" />
