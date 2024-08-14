@@ -53,6 +53,7 @@
 
   <!-- Hardware -->
   <project path="hardware/interfaces" name="hardware_interfaces" remote="fortune" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="fortune" />
   <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="fortune" >
     <!-- Add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
