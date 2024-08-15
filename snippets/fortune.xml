@@ -99,6 +99,7 @@
   <!-- Packages -->
   <project path="packages/apps/FortuneCraft" name="packages_apps_FortuneCraft" remote="fortune" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="fortune" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="fortune" />
   <project path="packages/apps/OmniStyles" name="packages_apps_OmniStyle" remote="fortune" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="fortune" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="fortune" />
