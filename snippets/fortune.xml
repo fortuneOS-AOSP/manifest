@@ -101,6 +101,7 @@
 
   <!-- Packages -->
   <project path="packages/apps/FortuneCraft" name="packages_apps_FortuneCraft" remote="fortune" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="fortune" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="fortune" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="fortune-gitea" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="fortune" />
