@@ -9,5 +9,6 @@
 
   <!-- Packages -->
   <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github"/>
+  <project path="packages/apps/SystemUIFlagFlipper" name="TheParasiteProject/packages_apps_SystemUIFlagFlipper" revision="main" remote="github"/>
 
 </manifest>
