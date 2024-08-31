@@ -47,6 +47,7 @@
   <project path="device/qcom/sepolicy_vndr/sm6225" name="device_qcom_sepolicy_vndr" revision="usagi-caf-sm6225" remote="fortune" />
 
   <!-- External -->
+  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="fortune" />
   <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="fortune" />
   <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="fortune" />
 
