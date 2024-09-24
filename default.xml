@@ -2,11 +2,13 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-15.0.0_r1"
            remote="aosp"
-           sync-j="4" />
+           sync-j="4"
+           sync-c="true"
+           sync-f="true" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-15.0.0_r1"/>
   <contactinfo bugurl="go/repo-bug" />
@@ -1468,5 +1470,10 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <!-- fortuneOS -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/fortune.xml" />
+  <include name="snippets/external.xml" />
 
 </manifest>

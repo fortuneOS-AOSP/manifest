@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- FortuneOS -->
+  <remote  name="fortune"
+           fetch="https://github.com/fortuneOS-AOSP"
+           revision="vangelis" />
+
+  <remote  name="fortune-devices"
+           fetch="https://github.com/Fortune-OS-Devices"
+           revision="vangelis" />
+
+  <remote  name="fortune-gitlab"
+           fetch="https://gitlab.com/FortuneOS-AOSP"
+           revision="vangelis" />
+
+  <remote  name="fortune-gitea"
+           fetch="https://gitea.com/FortuneOS"
+           revision="vangelis" />
+
+  <!-- Rootdir -->
+  <project path="art" name="art" groups="pdk" remote="fortune" />
+  <project path="bionic" name="bionic" groups="pdk" remote="fortune" />
+  <project path="development" name="development" groups="developers,pdk-cw-fs,pdk-fs" remote="fortune" />
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="fortune" />
+  <project path="manifest" name="manifest" remote="fortune" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="fortune" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="fortune" >
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="fortune" >
+    <linkfile dest="Android.bp" src="root.bp" />
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  </project>
+  <project path="build/release" name="build_release" remote="fortune" />
+
+  <!-- Device -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="fortune" />
+  <project path="device/qcom/sepolicy_vndr/sm6225" name="device_qcom_sepolicy_vndr" revision="vangelis-caf-sm6225" remote="fortune" />
+
+  <!-- External -->
+  <project path="external/avb" name="external_avb" groups="pdk" remote="fortune" />
+  <project path="external/dtc" name="external_dtc" groups="pdk" remote="fortune" />
+  <project path="external/e2fsprogs" name="external_e2fsprogs" remote="fortune" />
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="fortune" />
+  <project path="external/mksh" name="external_mksh" remote="fortune" />
+  <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="fortune" />
+  <project path="external/zstd" name="external_zstd" remote="fortune" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="fortune" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="fortune" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="fortune" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="fortune" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="fortune" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="fortune" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="fortune" >
+    <!-- Add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- Add guards for CLO repositories -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="kernel/google/gs101/private/google-modules/Android.bp" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm6225/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm6225/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm6225/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
+    <!-- add guards for Pixel kernel modules -->
+    <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
+  </project>
+  <project path="hardware/qcom-caf/sm6225/audio/agm" name="vendor_qcom_opensource_agm" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/pal" name="vendor_qcom_opensource_arpal-lx" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/audio/primary-hal" name="hardware_qcom_audio-ar" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/dataipa" name="vendor_qcom_opensource_dataipa" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/display" name="hardware_qcom_display" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/qcom-caf/sm6225/media" name="hardware_qcom_media" remote="fortune" revision="vangelis-caf-sm6225" />
+  <project path="hardware/ril" name="hardware_ril" groups="pdk" remote="fortune" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="fortune" />
+  <project path="packages/apps/SystemUIFlagFlipper" name="packages_apps_SystemUIFlagFlipper" remote="fortune" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="fortune" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="fortune" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="fortune" />
+
+  <!-- System -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="fortune" />
+  <project path="system/core" name="system_core" groups="pdk" remote="fortune" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="fortune" />
+  <project path="system/media" name="system_media" groups="pdk" remote="fortune" />
+  <project path="system/security" name="system_security" groups="pdk" remote="fortune" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="fortune" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="fortune" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="fortune" />
+
+  <!-- Vendor -->
+  <project path="vendor/fortune" name="vendor_fortune" remote="fortune" />
+  <project path="vendor/fortune-extras" name="vendor_fortune-extras" remote="fortune" />
+  <project path="vendor/fortune-preference" name="vendor_fortune-preference" remote="fortune" />
+  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="fortune-gitlab" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="fortune" />
+
+</manifest>
