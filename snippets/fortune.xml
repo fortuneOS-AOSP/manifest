@@ -26,6 +26,7 @@
   <project path="manifest" name="manifest" remote="fortune" />
 
   <!-- Bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="fortune"/>
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="fortune" />
 
   <!-- Build -->
