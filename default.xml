@@ -1473,6 +1473,7 @@
 
   <!-- fortuneOS -->
   <include name="snippets/remove.xml" />
+  <include name="snippets/clo.xml" />
   <include name="snippets/fortune.xml" />
   <include name="snippets/external.xml" />
 

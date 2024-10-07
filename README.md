@@ -13,7 +13,7 @@ Prior to building, you will need basic knowledge of [Git](https://www.atlassian.
 1. Run the following commands to sync source
 
 ```
-repo init --no-repo-verify -u https://github.com/fortuneOS-AOSP/manifest.git -b vangelis -g default,-mips,-darwin,-notdefault --git-lfs
+repo init --no-repo-verify -u https://github.com/fortuneOS-AOSP/manifest.git -b vangelis-qc -g default,-mips,-darwin,-notdefault --git-lfs
 ```
 2. To sync source, enter
 

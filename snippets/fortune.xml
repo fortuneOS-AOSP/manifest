@@ -46,6 +46,7 @@
 
   <!-- Device -->
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="fortune" />
+  <project path="device/qcom/common" name="device_qcom_common" remote="fortune" />
   <project path="device/qcom/sepolicy_vndr/sm6225" name="device_qcom_sepolicy_vndr" revision="vangelis-caf-sm6225" remote="fortune" />
 
   <!-- External -->
@@ -127,10 +128,11 @@
   <project path="system/vold" name="system_vold" groups="pdk" remote="fortune" />
 
   <!-- Vendor -->
-  <project path="vendor/fortune" name="vendor_fortune" remote="fortune" />
+  <project path="vendor/fortune" name="vendor_fortune" remote="fortune" revision="vangelis-qc" />
   <project path="vendor/fortune-extras" name="vendor_fortune-extras" remote="fortune" />
   <project path="vendor/fortune-preference" name="vendor_fortune-preference" remote="fortune" />
   <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="fortune-gitlab" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="fortune" />
+  <project path="vendor/qcom/common" name="vendor_qcom_common" remote="fortune" />
 
 </manifest>

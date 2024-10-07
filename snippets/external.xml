@@ -11,6 +11,10 @@
            fetch="https://github.com/"
            revision="lineage-21.0" />
 
+  <remote  name="yaap"
+           fetch="https://github.com/yaap"
+           revision="refs/heads/fifteen" />
+
   <!-- Device -->
   <project path="device/mediatek/sepolicy_vndr" name="LineageOS/android_device_mediatek_sepolicy_vndr" revision="lineage-21" remote="LineageOS" />
   <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" groups="qcom,qssi" remote="LineageOS" />
@@ -110,6 +114,7 @@
   <project path="vendor/qcom/opensource/commonsys/display" name="LineageOS/android_vendor_qcom_opensource_display-commonsys" groups="qcom,qssi" remote="LineageOS" />
   <project path="vendor/qcom/opensource/commonsys/fm" name="LineageOS/android_vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="LineageOS" />
   <project path="vendor/qcom/opensource/commonsys/wfd" name="LineageOS/android_vendor_qcom_opensource_wfd-commonsys" groups="qcom,kailua-video" remote="LineageOS" />
+  <project path="vendor/qcom/opensource/core-utils" name="vendor_qcom_opensource_core-utils" remote="yaap" />
   <project path="vendor/qcom/opensource/core-utils-sys" name="LineageOS/android_vendor_qcom_opensource_core-utils-sys" groups="qcom,qssi" remote="LineageOS" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="LineageOS/android_vendor_qcom_opensource_core-utils-vendor" groups="qcom,kailua-vendor" remote="LineageOS" />
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" revision="lineage-21.0-legacy-um" remote="LineageOS" />

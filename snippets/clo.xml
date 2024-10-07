@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="aospa"
+           fetch="https://github.com/AOSPA"
+           revision="refs/heads/uvite" />
+
+  <remote  name="clo"
+           fetch="https://git.codelinaro.org/clo/"
+           revision="refs/tags/LA.QSSI.14.0.r1-10000.04-qssi.0" />
+
+  <!-- Device -->
+  <project path="device/qcom/qssi" name="android_device_qcom_qssi" remote="aospa" />
+
+  <!-- Qcom Commonsys -->
+  <project path="vendor/qcom/opensource/commonsys/dpm" name="la/platform/vendor/qcom-opensource/dpm-commonsys" remote="clo" />
+
+</manifest>
