@@ -10,6 +10,10 @@
            fetch="https://github.com/Fortune-OS-Devices"
            revision="vangelis" />
 
+  <remote  name="fortune-codeberg"
+           fetch="https://codeberg.org/FortuneOS"
+           revision="vangelis" />
+
   <remote  name="fortune-gitlab"
            fetch="https://gitlab.com/FortuneOS-AOSP"
            revision="vangelis" />
@@ -130,7 +134,7 @@
   <project path="vendor/fortune" name="vendor_fortune" remote="fortune" />
   <project path="vendor/fortune-extras" name="vendor_fortune-extras" remote="fortune" />
   <project path="vendor/fortune-preference" name="vendor_fortune-preference" remote="fortune" />
-  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="fortune-gitlab" />
+  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="fortune-codeberg" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="fortune" />
 
 </manifest>
