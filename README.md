@@ -25,6 +25,7 @@ repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune 
 
 ```
 source build/envsetup.sh
+export <devicecodename>
 lunch fortune_<devicecodename>-user
 mka fortune -j$(nproc --all)
 ```
