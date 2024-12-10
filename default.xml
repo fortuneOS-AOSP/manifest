@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-15.0.0_r8"
            remote="aosp"
@@ -1411,4 +1411,8 @@
   </project>
   <!-- END open-source projects -->
 
+  <!-- fortuneOS -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/fortune.xml" />
+  <include name="snippets/external.xml" />
 </manifest>
